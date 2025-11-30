@@ -39,3 +39,26 @@ def unset_proxy():
     print("\n✅ Proxy has been REMOVED successfully.")
 
 
+def main():
+    while True:
+        print("\n===============================")
+        print("   GIT & NPM PROXY MANAGER")
+        print("===============================")
+        print("1. Set Proxy")
+        print("2. Unset Proxy")
+        print("3. Exit")
+
+        choice = input("\nSelect option: ")
+
+        if choice == "1":
+            set_proxy()
+        elif choice == "2":
+            unset_proxy()
+        elif choice == "3":
+            print("\nExiting...")
+            break
+        else:
+            print("Invalid choice! Try again.")
+
+if __name__ == "__main__":
+    main()
