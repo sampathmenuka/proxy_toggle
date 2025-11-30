@@ -24,4 +24,18 @@ def set_proxy():
 
     print("\n✅ Proxy has been SET successfully.")
 
+def unset_proxy():
+    print("\n=== Unsetting Proxy ===")
+
+    # Git
+    run_command('git config --global --unset http.proxy')
+    run_command('git config --global --unset https.proxy')
+
+    # NPM
+    run_command('npm config delete proxy')
+    run_command('npm config delete https-proxy')
+    run_command('npm config delete strict-ssl')
+
+    print("\n✅ Proxy has been REMOVED successfully.")
+
 
